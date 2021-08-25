@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-todos',
   templateUrl: './todos.component.html',
-  styleUrls: ['./todos.component.css']
+  styleUrls: ['./todos.component.css'],
 })
 export class TodosComponent implements OnInit {
+  todos: string[] = ['eat', 'study', 'sleep'];
+  email: string = '';
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
+  @Input() todo: string = '';
 
-  ngOnInit(): void {
+  editTodo(todo: string): void {
+    console.log(`TODO: ${todo}`);
   }
 
+  deleteTodo(todo : string) : void {
+
+  }
 }
