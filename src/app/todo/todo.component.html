@@ -2,3 +2,5 @@
 <li>{{index}}. {{value}}</li>
 <button (click)="editTodo(value)">Edit</button>
 <button (click)="deleteTodo(value)">Delete</button>
+<input type="text" placeholder="Edit todo" [(ngModel)] = "value"/>
+<button (click)="editTodo(value)">Change</button>

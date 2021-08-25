@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { NgModel } from '@angular/forms';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-todo',
@@ -12,12 +14,13 @@ export class TodoComponent implements OnInit {
 
   @Input() value:string="";
   @Input() index:string="";
+  @Input() todos:string[]=[];
 
   editTodo(todo: string): void {
-    console.log(`TODO: ${this.value}`);
+    this.value = todo;
   }
 
   deleteTodo(todo : string) : void {
-
+    
   }
 }
