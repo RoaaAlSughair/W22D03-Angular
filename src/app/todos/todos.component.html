@@ -3,5 +3,5 @@
   <app-todo value={{todo}} index={{i}}></app-todo>
   </ul>
 
-<input type="text" placeholder="A new todo"/>
-<button >Add</button>
+<input type="text" [(ngModel)] = "todo" placeholder="A new todo"/>
+<button (click) = "addTodo(todo)">Add</button>
