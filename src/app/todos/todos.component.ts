@@ -13,11 +13,7 @@ export class TodosComponent implements OnInit {
   ngOnInit(): void {}
   @Input() todo: string = '';
 
-  editTodo(todo: string): void {
-    console.log(`TODO: ${todo}`);
-  }
-
-  deleteTodo(todo : string) : void {
-
+  addTodo(todo: string) : void {
+    this.todos.push(todo);
   }
 }
