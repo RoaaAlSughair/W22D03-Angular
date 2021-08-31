@@ -1,6 +1,6 @@
-<p>todo works!</p>
-<li>{{index}}. {{todo}}</li>
+<li *ngIf="notDone">{{index}}. {{todo}}
 <button>Edit</button>
-<button (click)="deleteTodo(todo)">Delete</button>
+<button (click)="deleteTodo()">Delete</button>
 <input type="text" placeholder="Edit todo" [(ngModel)] = "editedTodo"/>
-<button (click)="editTodo(todo)">Change</button>
+<button (click)="editTodo()">Change</button>
+</li>

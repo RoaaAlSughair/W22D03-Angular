@@ -15,7 +15,7 @@ export class TodosComponent implements OnInit {
   ngOnInit(): void {}
   @Input() todo: string = '';
 
-  addTodo(todo: string) : void {
-    this.todos.push(todo);
+  addTodo(todo: string): void {
+    if (todo) this.todos.push(todo);
   }
 }

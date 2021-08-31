@@ -16,12 +16,13 @@ export class TodoComponent implements OnInit {
   @Input() editedTodo: string = '';
   @Input() index: string = '';
   @Input() todos: string[] = [];
+  @Input() notDone: boolean = true;
 
-  editTodo(todo: string): void {
-    this.todo = this.editedTodo;
+  editTodo(): void {
+    if (this.editedTodo) this.todo = this.editedTodo;
   }
 
-  deleteTodo(todo: string): void {
-    // this.value = todo;
+  deleteTodo(): void {
+    this.notDone = false;
   }
 }
