@@ -5,22 +5,23 @@ import { NgStyle } from '@angular/common';
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.css']
+  styleUrls: ['./todo.component.css'],
 })
 export class TodoComponent implements OnInit {
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {}
 
-  @Input() value:string="";
-  @Input() index:string="";
-  @Input() todos:string[]=[];
+  @Input() todo: string = '';
+  @Input() editedTodo: string = '';
+  @Input() index: string = '';
+  @Input() todos: string[] = [];
 
   editTodo(todo: string): void {
-    this.value = todo;
+    this.todo = this.editedTodo;
   }
 
-  deleteTodo(todo : string) : void {
-    
+  deleteTodo(todo: string): void {
+    // this.value = todo;
   }
 }

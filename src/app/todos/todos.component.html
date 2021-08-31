@@ -1,6 +1,6 @@
 <p>todos works!</p>
 <ul *ngFor="let todo of todos; let i = index">
-  <app-todo value={{todo}} index={{i}}></app-todo>
+  <app-todo todo={{todo}} index={{i}}></app-todo>
   </ul>
 
 <input type="text" [(ngModel)] = "todo" placeholder="A new todo"/>

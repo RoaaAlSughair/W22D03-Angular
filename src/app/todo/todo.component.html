@@ -1,6 +1,6 @@
 <p>todo works!</p>
-<li>{{index}}. {{value}}</li>
-<button (click)="editTodo(value)">Edit</button>
-<button (click)="deleteTodo(value)">Delete</button>
-<input type="text" placeholder="Edit todo" [(ngModel)] = "value"/>
-<button (click)="editTodo(value)">Change</button>
+<li>{{index}}. {{todo}}</li>
+<button>Edit</button>
+<button (click)="deleteTodo(todo)">Delete</button>
+<input type="text" placeholder="Edit todo" [(ngModel)] = "editedTodo"/>
+<button (click)="editTodo(todo)">Change</button>
